@@ -30,6 +30,7 @@ body {
   background-size: cover;
   background-position: center;
   font-family: Monsterrat;
+  overflow-x: hidden;
 }
 
 .App-link {

@@ -2,30 +2,37 @@ import React, { Component} from 'react';
 import gifImg from '../../images/flag.gif';
 import bannerLogo from '../../images/bannerlogo.png';
 import '../../css/home.css'
+import { Transition } from 'react-spring/renderprops'
 
 export default class Home extends Component {
-
-    componentDidMount() {
-        const icon = window.document.querySelector('.right-part img');
-        const banner_text = document.querySelector('.left-part');
-        
-        icon.classList.add('show-animation');
-        banner_text.classList.add('show-animation')
-    }
 
     render() {
         const bannerText = "DOBRO DO{LI NA YVANI;AN SAJT";
         return (
             <div>
                 <div className="section-one">
-                    <div className="two-parts">
-                    <div className="left-part">
+                <div className="two-parts">
+                    <Transition
+                        items={<div className="left-part">
                         <div className="banner-text"> <span>{bannerText}
                         </span><span className="span2">pokreta Levijatan
                             Srbija</span></div>
+                            
                         <div className="gif-container"><img className="animated-gif" src={gifImg} alt="flag" /></div>
-                    </div>
-                    <div className="right-part"><img src={bannerLogo} /></div>
+                    </div>} keys={item => item}
+                        from={{ opacity: 0, visibility: 'hidden', transition: 'all 4s ease-in-out' }}
+                        enter={{ opacity: 1, visibility: 'visible' }}
+                        leave={{ opacity: 1, visibility: 'visible' }}>
+                        {item => props => <div style={props}>{item}</div>}
+                    </Transition>
+                    
+                    <Transition
+                        items={<div className="right-part"><img src={bannerLogo} /></div>} keys={item => item}
+                        from={{ transform: 'translateX(100%)', opacity: 0, visibility: 'hidden', transition: 'all 1.5s ease-in-out' }}
+                        enter={{ transform: 'translateX(0)', opacity: 1, visibility: 'visible' }}
+                        leave={{ transform: 'translateX(0)', opacity: 1, visibility: 'visible' }}>
+                        {item => props => <div style={props}>{item}</div>}
+                    </Transition>
                     </div>
                 </div>
                 <div className="section-three">

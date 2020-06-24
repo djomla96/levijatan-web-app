@@ -12,12 +12,12 @@
   text-align: center;
   justify-content: center;
   font-family: levijatan;
-  opacity: 0;
+  /* opacity: 0; */
   flex-direction: column;
-  visibility: hidden;
+  /* visibility: hidden; */
   align-items: center;
-  transition: all 2s ease-in-out;
-  transition-delay: 2s;
+  /* transition: all 2s ease-in-out;
+  transition-delay: 2s; */
   display: flex;
 }
 .span2 {
@@ -39,6 +39,7 @@
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
+  width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -187,10 +188,10 @@
   text-align: center;
 }
 .right-part img {
-  transform: translateX(200%);
+  /* transform: translateX(200%);
   opacity: 0;
   visibility: hidden;
-  transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out; */
 }
 
 .show-animation {
