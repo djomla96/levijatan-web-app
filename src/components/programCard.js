@@ -2,10 +2,10 @@ import React from 'react';
 
 const programIcon = (props) => {
     return (
-        <div className="single-card">
-              <img src={props.img} alt="" />
-              <div className="card-text">
-                  <p>{props.cardText}</p>
+        <div class="single-card">
+             
+              <div class="card-text">
+                  {props.cardText()}
               </div>
   
           </div>

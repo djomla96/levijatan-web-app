@@ -30,9 +30,9 @@ export default class App extends Component {
         {isLat === 'true' ? <HeaderSrl /> : <Header />}
           <Switch>
             <Route exact path={'/'} component={Home}/>
-            <Route path={'/o-nama'} component={About}/>
-            <Route path={'/program-pokreta'} component={Program}/>
-            <Route path={'/kontakt'} component={Contact}/>
+            <Route exact path={'/o-nama'} component={About}/>
+            <Route exact path={'/program-pokreta'} component={Program}/>
+            <Route exact path={'/kontakt'} component={Contact}/>
 
             <Route path={'/srl'} component={HomeSrl}/>
             <Route path={'/o-nama/srl'} component={AboutSrl}/>

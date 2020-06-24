@@ -24,7 +24,7 @@ export default class About extends Component {
     render() {
         return (
             <div>
-    <div className="title"> О НАМА </div>
+    <div className="title">O NAMA</div>
     <div className="banner-content">
       <div className="banner-contaner">
         <div className="banner-img  right"><img src={pic1} alt="picture1" /></div>
