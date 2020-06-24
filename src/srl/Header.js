@@ -4,9 +4,7 @@ import logo from '../images/new-logo.png'
 import React, { Component } from 'react'
 import cookie from 'react-cookies';
 import history from "../utils/history";
-
 export default class Header extends Component {
-
   componentDidMount() {
     const burger = document.querySelector('.burger');
     const closeNav = document.querySelector('.nav-close');
@@ -21,12 +19,12 @@ export default class Header extends Component {
   }
 
   saveCookie() {
-    cookie.save('isLat', true, { path: '/' });
+    cookie.save('isLat', false, { path: '/' });
   }
 
   render() {
-    let currentRoute = history.location.pathname;
-    if(currentRoute === "/") currentRoute = "";
+    const currentRoute = history.location.pathname;
+    console.log("=======>", currentRoute);
     return (
       <div>
         <div className="social-networks">
@@ -38,7 +36,7 @@ export default class Header extends Component {
     </div>
     <div className="social-right">
       <div className="social-img"><i className="fa fa-book b"></i></div>
-      <div className="social-text"> <span> ЋИР<a className="press" href={`${currentRoute}/srl`} onClick={() => this.saveCookie()}>/LAT</a></span></div>
+      <div className="social-text"> <span> <a className="press" href={currentRoute.replace('/srl', "/")} onClick={() => this.saveCookie()}>ЋИР</a>/LAT</span></div>
     </div>
   </div>
   <nav>
@@ -53,12 +51,12 @@ export default class Header extends Component {
       </div>
       <ul className="nav-list">
         <li>
-          <a className="text" href="/">ПОЧЕТНА</a>
+          <a className="text" href="/srl">POČETNA</a>
         </li>
-        <li><a className="text" href="/o-nama">О НАМА</a></li>
-        <li><a className="text" href="/program-pokreta">ПРОГРАМ</a></li>
+        <li><a className="text" href="/o-nama/srl">O NAMA</a></li>
+        <li><a className="text" href="/program-pokreta/srl">PROGRAM</a></li>
         {/* <!-- <li><a className="text" href="/video-arhiva">ВИДЕО АРХИВА</a></li> --> */}
-        <li><a className="text" href="/kontakt">КОНТАКТ</a></li>
+        <li><a className="text" href="/kontakt/srl">KONTAKT</a></li>
         <li className="nav-close"><i className="fa fa-close"></i></li>
       </ul>
       <div className="burger">
