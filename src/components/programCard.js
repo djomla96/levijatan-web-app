@@ -2,9 +2,9 @@ import React from 'react';
 
 const programIcon = (props) => {
     return (
-        <div class="single-card">
+        <div className="single-card">
               <img src={props.img} alt="" />
-              <div class="card-text">
+              <div className="card-text">
                   <p>{props.cardText}</p>
               </div>
   

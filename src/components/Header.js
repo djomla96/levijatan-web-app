@@ -1,10 +1,25 @@
-import React from 'react';
 import '../css/header.css'
 import logo from '../images/new-logo.png'
 
-const Header = () => {
+import React, { Component } from 'react'
+
+export default class Header extends Component {
+
+  componentDidMount() {
+    const burger = document.querySelector('.burger');
+    const closeNav = document.querySelector('.nav-close');
+    const navList = document.querySelector('.nav-list');
+    burger.addEventListener('click', function() {
+        navList.classList.add('show-nav');
+    })
+
+    closeNav.addEventListener('click', function() {
+        navList.classList.remove('show-nav');
+    })
+  }
+  render() {
     return (
-        <div>
+      <div>
         <div className="social-networks">
     <div className="icons">
       <a href="https://www.facebook.com/pasazot/"> <i className="fa fa-facebook nf"></i></a>
@@ -44,7 +59,8 @@ const Header = () => {
   </div>
 </nav>
 </div>
-    );
+    )
+  }
 }
 
-export default Header;
+

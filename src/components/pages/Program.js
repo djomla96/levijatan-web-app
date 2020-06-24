@@ -15,10 +15,10 @@ import img10 from '../../images/10.jpg';
 export default class Program extends Component {
     render() {
         return (
-            <div class="wrapper">
-                <div class="title">ПРОГРАМ</div>
+            <div className="wrapper">
+                <div className="title">ПРОГРАМ</div>
             
-                <div class="program-card-container">
+                <div className="program-card-container">
                         <ProgramCard 
                             cardText="Животиња је осећајно биће и такав статус мора бити дефинисан и предвиђен законима републике Србијe.Залагаћемо се за доследну примену свих закона и прописа у области заштите животиња."
                             img={img1}
