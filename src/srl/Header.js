@@ -23,8 +23,14 @@ export default class Header extends Component {
   }
 
   render() {
-    const currentRoute = history.location.pathname;
-    console.log("=======>", currentRoute);
+    let currentRoute = history.location.pathname;
+    let nextRoute = "";
+
+    if(currentRoute === "/srl") nextRoute = "/"
+    else nextRoute = currentRoute.replace('/srl', "");
+
+    console.log(currentRoute);
+
     return (
       <div>
         <div className="social-networks">
@@ -36,7 +42,7 @@ export default class Header extends Component {
     </div>
     <div className="social-right">
       <div className="social-img"><i className="fa fa-book b"></i></div>
-      <div className="social-text"> <span> <a className="press" href={currentRoute.replace('/srl', "/")} onClick={() => this.saveCookie()}>ЋИР</a>/LAT</span></div>
+      <div className="social-text"> <span> <a className="press" href={nextRoute} onClick={() => this.saveCookie()}>ЋИР</a>/LAT</span></div>
     </div>
   </div>
   <nav>

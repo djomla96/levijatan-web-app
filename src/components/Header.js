@@ -26,6 +26,7 @@ export default class Header extends Component {
 
   render() {
     let currentRoute = history.location.pathname;
+    console.log("=====>",currentRoute);
     if(currentRoute === "/") currentRoute = "";
     return (
       <div>

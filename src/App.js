@@ -34,7 +34,7 @@ export default class App extends Component {
             <Route path={'/program-pokreta'} component={Program}/>
             <Route path={'/kontakt'} component={Contact}/>
 
-            <Route exact path={'/srl'} component={HomeSrl}/>
+            <Route path={'/srl'} component={HomeSrl}/>
             <Route path={'/o-nama/srl'} component={AboutSrl}/>
             <Route path={'/program-pokreta/srl'} component={ProgramSrl}/>
             <Route path={'/kontakt/srl'} component={ContactSrl}/>
