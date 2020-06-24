@@ -1,0 +1,93 @@
+.title {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 30px;
+}
+.title:before {
+  background-color: red;
+  content: "";
+  display: inline-block;
+  height: 25px;
+  margin-right: 14px;
+  width: 3px;
+}
+
+.single-card {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  text-align: center;
+  width: 30%;
+  height: 250px;
+  position: relative;
+}
+.program-card-container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.program-card-container .single-card img {
+  border-radius: 10%;
+  height: 100%;
+  width: 100%;
+  /* -webkit-filter: brightness(100%); */
+}
+.program-card-container .single-card:hover img {
+  webkit-filter: blur(4px); /* Chrome, Safari, Opera */
+  filter: blur(14px);
+  cursor: pointer;
+
+  /* -webkit-filter: brightness(30%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease; */
+}
+
+.single-card:hover .card-text {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.single-card .card-text {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  text-shadow: white 0px 0px 4px;
+}
+
+p {
+  font-size: 23px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 10px;
+  margin-inline-end: 25px;
+  font-weight: bold;
+}
+
+.card-title {
+  font-family: Montserrat;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 1220px) {
+  .single-card {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .single-card {
+    width: 70%;
+  }
+}

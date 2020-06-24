@@ -1,0 +1,162 @@
+.social-networks {
+  background-color: #fff;
+  display: flex;
+  padding: 5px 10px;
+  height: 20px;
+  color: #000;
+  justify-content: space-between;
+}
+.social-networks a {
+  color: #000;
+}
+
+.social-right {
+  display: flex;
+
+  align-items: center;
+}
+.social-img {
+  height: 100%;
+  margin-right: 5px;
+}
+.social-img img {
+  max-height: 100%;
+}
+.social-networks i {
+  padding: 0 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nf:hover {
+  color: #3b5998;
+}
+
+.press {
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.ni:hover {
+  color: transparent;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  background: -webkit-radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.nt:hover {
+  color: #1ca3f4;
+}
+nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(180deg, #124985 0%, #2b6db6 100%);
+}
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+.header .logo img {
+  width: 6em;
+}
+
+.logo-header {
+  width: 5em;
+}
+
+.brand-text {
+  font-size: 13px;
+  font-family: levijatan;
+  padding-top: 1em;
+  position: absolute;
+  color: #fafafafa;
+}
+
+.header ul {
+  display: flex;
+}
+.header ul li {
+  list-style: none;
+}
+
+.header ul li a {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0 20px;
+  transition: all 0.3s ease-in-out;
+}
+.header ul li a:hover {
+  color: #df0000;
+}
+.burger {
+  display: none;
+}
+.nav-close {
+  position: absolute;
+  color: #fff;
+  top: 25px;
+  font-size: 27px !important;
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .brand-text {
+    display: none;
+  }
+}
+
+/* 960 - nav elementi ispadaju */
+@media only screen and (max-width: 960px) {
+  .header ul {
+    display: flex;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    top: -16px;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 56px;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+  }
+  .header .burger {
+    display: block !important;
+  }
+
+  .nav-close {
+    display: block;
+  }
+  .burger {
+    width: 65px;
+    font-size: 30px;
+    color: #777;
+  }
+}
+
+.show-nav {
+  transform: translateX(0) !important;
+}
+
+.span1 {
+  padding-left: 4.3em;
+}
+
+.navbar-brand {
+  text-decoration: none;
+}
