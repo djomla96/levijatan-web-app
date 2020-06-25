@@ -16,10 +16,10 @@ const Footer = () => {
       <li>
         <h2>PRETRAŽI</h2>
         <ul className="box">
-          <li><a href="about.html">O NAMA</a></li>
-          <li><a href="program.html">PROGRAM</a></li>
+          <li><a href="/o-nama/srl">O NAMA</a></li>
+          <li><a href="/program-pokreta/srl">PROGRAM</a></li>
           {/* <!-- <li><a href="/video-arhiva">ВИДЕО АРХИВА</a></li> --> */}
-          <li><a href="contact.html">KONTAKT</a></li>
+          <li><a href="/kontakt/srl">KONTAKT</a></li>
         </ul>
       </li>
 
