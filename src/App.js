@@ -10,7 +10,7 @@ import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Program from './components/pages/Program';
 import Contact from './components/pages/Contact';
-
+import Form from './components/pages/Form';
 
 import HomeSrl from './srl/pages/Home';
 import AboutSrl from './srl/pages/About';
@@ -33,6 +33,7 @@ export default class App extends Component {
             <Route exact path={'/o-nama'} component={About}/>
             <Route exact path={'/program-pokreta'} component={Program}/>
             <Route exact path={'/kontakt'} component={Contact}/>
+            <Route exact path={'/pristupnica'} component={Form}/>
 
             <Route path={'/srl'} component={HomeSrl}/>
             <Route path={'/o-nama/srl'} component={AboutSrl}/>

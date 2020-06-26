@@ -29,8 +29,6 @@ export default class Header extends Component {
     if(currentRoute === "/srl") nextRoute = "/"
     else nextRoute = currentRoute.replace('/srl', "");
 
-    console.log(currentRoute);
-
     return (
       <div>
         <div className="social-networks">
