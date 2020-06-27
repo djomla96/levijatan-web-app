@@ -9,19 +9,21 @@ import { withAlert } from 'react-alert'
 class Form extends Component {
 
     state = {
-        imePrezime: "Test",
-        jmbg: 1231231212345,
-        adresa: "test 1",
-        telefon: "069856958",
-        email: "test@test.com",
-        sss: "VSS",
-        zanimanje: "Advokat",
+        imePrezime: "",
+        jmbg: null,
+        adresa: "",
+        telefon: "",
+        email: "",
+        sss: "",
+        zanimanje: "",
     }
 
     saveBot(data) {
         axios.post('/pristupnice/save', data)
-            .then(response => this.props.alert.show('Cestitamo uspesno ste poslali pristupnicu', { type: 'success' }))
-            .catch(error => console.log(error))
+            .then(response => {
+                this.setState({ imePrezime: "", jmbg: 0, adresa: "", telefon: "", email: "", sss: "", zanimanje: ""});
+                this.props.alert.show('Cestitamo uspesno ste poslali pristupnicu', { type: 'success' })
+            }).catch(error => console.log(error))
     }
 
     validate(data) {
@@ -64,7 +66,9 @@ class Form extends Component {
     }
 
     render() {
-        const adresa = "ADRESA I OP{INA STANOVANJA"
+        const adresa = "ADRESA I OP{TINA STANOVAWA";
+        const stepen = "STEPEN STRU;NE SPREME";
+        const buttonText = "PO{AQI PRISTUPNICU";
         return (
             <div className="form-wrapper">
                 <div className="logos">
@@ -78,15 +82,15 @@ class Form extends Component {
                 <div className="headline"><h1>PRISTUPNICA</h1></div>
 
                 <form className="form-box">
-                    <div className="form-input"><p>IME I PREZIME</p><input value={this.state.imePrezime} onChange={(event) => this.setState({ imePrezime: event.target.value })} type="text" /></div>
+                    <div className="form-input"><p>IME I PREYIME</p><input value={this.state.imePrezime} onChange={(event) => this.setState({ imePrezime: event.target.value })} type="text" /></div>
                     <div className="form-input"><p>JMBG</p><input value={this.state.jmbg} onChange={(event) => this.setState({ jmbg: event.target.value })} type="number"/></div>
                     <div className="form-input"><p>{adresa}</p><input value={this.state.adresa} onChange={(event) => this.setState({ adresa: event.target.value })} type="text"></input></div>
                     <div className="form-input"><p>TELEFON</p><input value={this.state.telefon} onChange={(event) => this.setState({ telefon: event.target.value })} type="text"></input></div>
                     <div className="form-input"><p>E-MAIL</p><input value={this.state.email} onChange={(event) => this.setState({ email: event.target.value })} type="email"></input></div>
-                    <div className="form-input"><p>STEPEN STRUCNE SPREME</p><input value={this.state.sss} onChange={(event) => this.setState({ sss: event.target.value })} type="text"/></div>
-                    <div className="form-input"><p>ZANIMANJE</p><input value={this.state.zanimanje} onChange={(event) => this.setState({ zanimanje: event.target.value })} type="text"></input></div>
+                    <div className="form-input"><p>{stepen}</p><input value={this.state.sss} onChange={(event) => this.setState({ sss: event.target.value })} type="text"/></div>
+                    <div className="form-input"><p>YANIMAWE</p><input value={this.state.zanimanje} onChange={(event) => this.setState({ zanimanje: event.target.value })} type="text"></input></div>
 
-                    <div className="btn-submit" onClick={(event) => this.sendData(event)}><button>Posalji pristupnicu</button></div>
+                    <div className="btn-submit" onClick={(event) => this.sendData(event)}><button>{buttonText}</button></div>
                 </form>
             </div>
         )
