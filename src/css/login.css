@@ -3,7 +3,7 @@
 .login-form {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    max-width: 400px;
     margin: auto;
     padding: 100px 0px 40px 0px;
   }
@@ -22,7 +22,11 @@
     font-family: levijatan;
     color: #2b6db6;
   }
-  
+  @media screen and (max-width: 768px) {
+    .input-icon {
+        display: none;
+    }
+  }
   .input-field {
     border-radius: 10px;
     width: 100%;
