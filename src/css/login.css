@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Gudea:400,700);
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+    padding: 100px 0px 40px 0px;
+  }
+
+  .login-options {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30% 25px 30%;
+    padding: 0;
+  }
+  
+  .login-header {
+    margin: 0 auto 40px;
+    font-size: 18px;
+    font-family: levijatan;
+    color: #2b6db6;
+  }
+  
+  .input-field {
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+  }
+  
+  .input-icon {
+    position: relative;
+    left: 20px;
+    opacity: 1;
+    width: 14px;
+    height: 14px;
+  }
+  
+  .login-input {
+    width: 70%;
+    background: none;
+    border: none;
+    color: #ffffff;
+    height: 50px;
+    padding: 0 40px 0 50px;
+  }
+  .margin-b {
+      margin-bottom: 30px;
+  }
+  .login-input::placeholder {
+    color: #ffffff;
+  }
+  .login-input:focus {
+    outline: none;
+  }
+  .login-input:invalid {
+    box-shadow: none;
+  }
+  
+  .form-buttons {
+    margin: 50px 30px 60px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .login-button {
+    transition: ease-out 0.2s;
+    font-weight: 600;
+    background: none;
+    height: 40px;
+    width: 170px;
+    color: #2b6db6;
+    border: 2px solid #2b6db6;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: levijatan;
+  }
+  .login-button:hover {
+    color: #cbd6cb;
+    background-color: #2b6db6;
+  }
+  
+  .password_reminder {
+    margin-top: 10px;
+    cursor: pointer;
+    color: #2b6db6;
+  }
+  .password_reminder:hover {
+    color: #2b6db6;
+  }

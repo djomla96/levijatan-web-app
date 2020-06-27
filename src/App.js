@@ -11,6 +11,8 @@ import About from './components/pages/About';
 import Program from './components/pages/Program';
 import Contact from './components/pages/Contact';
 import Form from './components/pages/Form';
+import AdminLogin from './components/pages/AdminLogin';
+import AdminPanel from './components/pages/AdminPanel';
 
 import HomeSrl from './srl/pages/Home';
 import AboutSrl from './srl/pages/About';
@@ -34,11 +36,16 @@ export default class App extends Component {
             <Route exact path={'/program-pokreta'} component={Program}/>
             <Route exact path={'/kontakt'} component={Contact}/>
             <Route exact path={'/pristupnica'} component={Form}/>
-
+            <Route exact path={'/admin'} component={AdminLogin}/>
+            <Route exact path={'/admin/srl'} component={AdminLogin}/>
+            <Route exact path={'/tgzy75cffx2s5tar8cx5wi3rmefo7klhxneeipfcxdohimso1oxx790ff'} component={AdminPanel}/>
+            <Route exact path={'/tgzy75cffx2s5tar8cx5wi3rmefo7klhxneeipfcxdohimso1oxx790ff/srl'} component={AdminPanel}/>
+            
             <Route path={'/srl'} component={HomeSrl}/>
             <Route path={'/o-nama/srl'} component={AboutSrl}/>
             <Route path={'/program-pokreta/srl'} component={ProgramSrl}/>
             <Route path={'/kontakt/srl'} component={ContactSrl}/>
+            <Route exact path={'/pristupnica/srl'} component={Form}/>
           </Switch>
         {isLat === 'true' ? <FooterSrl /> : <Footer />}
         

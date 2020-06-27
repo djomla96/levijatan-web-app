@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "imePrezime" : "Nikola Kovacevic",
+        "jmbg": "0512981717776",
+        "adresa": "Pariske komune 4",
+        "telefon": "0695689658",
+        "email": "nesto@nesto.com",
+        "stepenSpreme": "VSS",
+        "zanimanje": "advokat"
+    },
+    {   
+        "id": 2,
+        "imePrezime" : "Nikola Kovacevic",
+        "jmbg": "0512981717776",
+        "adresa": "Pariske komune 4",
+        "telefon": "0695689658",
+        "email": "nesto@nesto.com",
+        "stepenSpreme": "VSS",
+        "zanimanje": "advokat"
+    },
+    {
+        "id": 3,
+        "imePrezime" : "Nikola Kovacevic",
+        "jmbg": "0512981717776",
+        "adresa": "Pariske komune 4",
+        "telefon": "0695689658",
+        "email": "nesto@nesto.com",
+        "stepenSpreme": "VSS",
+        "zanimanje": "advokat"
+    },
+    {
+        "id": 4,
+        "imePrezime" : "Nikola Kovacevic",
+        "jmbg": "0512981717776",
+        "adresa": "Pariske komune 4",
+        "telefon": "0695689658",
+        "email": "nesto@nesto.com",
+        "stepenSpreme": "VSS",
+        "zanimanje": "advokat"
+    },
+    {
+        "id": 5,
+        "imePrezime" : "Nikola Kovacevic",
+        "jmbg": "0512981717776",
+        "adresa": "Pariske komune 4",
+        "telefon": "0695689658",
+        "email": "nesto@nesto.com",
+        "stepenSpreme": "VSS",
+        "zanimanje": "advokat"
+    },
+    {
+        "id": 6,
+        "imePrezime" : "Nikola Kovacevic",
+        "jmbg": "0512981717776",
+        "adresa": "Pariske komune 4",
+        "telefon": "0695689658",
+        "email": "nesto@nesto.com",
+        "stepenSpreme": "VSS",
+        "zanimanje": "advokat"
+    }
+]
