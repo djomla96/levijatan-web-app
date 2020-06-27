@@ -59,7 +59,7 @@ export default class Header extends Component {
         <li><a className="text" href="/program-pokreta">ПРОГРАМ</a></li>
         {/* <!-- <li><a className="text" href="/video-arhiva">ВИДЕО АРХИВА</a></li> --> */}
         <li><a className="text" href="/kontakt">КОНТАКТ</a></li>
-        <li><a className="text" href="/pristupnica">PRISTUPNICA</a></li>
+        <li><a className="text" href="/pristupnica">ПРИСТУПНИЦА</a></li>
         <li className="nav-close"><i className="fa fa-close"></i></li>
       </ul>
       <div className="burger">
