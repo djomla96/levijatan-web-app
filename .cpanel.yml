@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/levijata1/public_html
-    - /bin/cp -R * /home/levijata1/public_html
+    - /bin/cp -R build/* /home/levijata1/public_html
