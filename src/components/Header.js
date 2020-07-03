@@ -53,7 +53,7 @@ export default class Header extends Component {
       </div>
       <ul className="nav-list">
         <li>
-          <a className="text" href="/">ПОЧЕТНА</a>
+          <a className="text" href="/">ПОssЧЕТНА</a>
         </li>
         <li><a className="text" href="/o-nama">О НАМА</a></li>
         <li><a className="text" href="/program-pokreta">ПРОГРАМ</a></li>
