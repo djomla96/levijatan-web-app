@@ -13,11 +13,14 @@ import Contact from './components/pages/Contact';
 import Form from './components/pages/Form';
 import AdminLogin from './components/pages/AdminLogin';
 import AdminPanel from './components/pages/AdminPanel';
+import Video from './components/pages/Video';
 
 import HomeSrl from './srl/pages/Home';
 import AboutSrl from './srl/pages/About';
 import ProgramSrl from './srl/pages/Program';
 import ContactSrl from './srl/pages/Contact';
+import FormSrl from './srl/pages/Form';
+import VideoSrl from './srl/pages/Video';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import cookie from 'react-cookies';
@@ -37,15 +40,17 @@ export default class App extends Component {
             <Route exact path={'/kontakt'} component={Contact}/>
             <Route exact path={'/pristupnica'} component={Form}/>
             <Route exact path={'/admin'} component={AdminLogin}/>
-            <Route exact path={'/admin/srl'} component={AdminLogin}/>
             <Route exact path={'/tgzy75cffx2s5tar8cx5wi3rmefo7klhxneeipfcxdohimso1oxx790ff'} component={AdminPanel}/>
-            <Route exact path={'/tgzy75cffx2s5tar8cx5wi3rmefo7klhxneeipfcxdohimso1oxx790ff/srl'} component={AdminPanel}/>
-            
+            <Route exact path={'/video-arhiva'} component={Video}/>
+
             <Route path={'/srl'} component={HomeSrl}/>
             <Route path={'/o-nama/srl'} component={AboutSrl}/>
             <Route path={'/program-pokreta/srl'} component={ProgramSrl}/>
             <Route path={'/kontakt/srl'} component={ContactSrl}/>
-            <Route exact path={'/pristupnica/srl'} component={Form}/>
+            <Route exact path={'/pristupnica/srl'} component={FormSrl}/>
+            <Route exact path={'/admin/srl'} component={AdminLogin}/>
+            <Route exact path={'/tgzy75cffx2s5tar8cx5wi3rmefo7klhxneeipfcxdohimso1oxx790ff/srl'} component={AdminPanel}/>
+            <Route exact path={'/video-arhiva/srl'} component={VideoSrl}/>
           </Switch>
         {isLat === 'true' ? <FooterSrl /> : <Footer />}
         

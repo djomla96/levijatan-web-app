@@ -60,9 +60,37 @@
 .btn-submit button:focus {
     outline: none;
 }
+.text-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 0 30px;
+}
+.text-wrapper h2 {
+    font-size: 25px;
+    font-family: Montseratt, sans-serif;
+    text-align: justify;
+}
+.text-wrapper p {
+    font-family: Montseratt, sans-serif;
+    font-size: 19px;
+}
+
+.text-wrapper span {
+    color: #df0000;
+}
+
 
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 15px;
+    }
+    .text-wrapper h2 {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    .text-wrapper {
+        margin-top: 0;
     }
 }

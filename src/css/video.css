@@ -1,0 +1,32 @@
+.video-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.single-video {
+    /* border: 1px solid #999; */
+    width: 30%;
+    /* background: rgba(0,0,0,0.5); */
+    /* color: #fff; */
+    text-align: left;
+    margin-bottom: 25px;
+}
+.single-video h2 {
+    margin-top: 20px!important;
+    padding-left: 10px;
+}
+.single-video p {
+    padding: 0 10px;
+}
+.title {
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+    .video-wrapper {
+        flex-direction: column;
+    }
+    .single-video {
+        width: 100%;
+    }
+}

@@ -120,6 +120,11 @@ nav {
     display: none;
   }
 }
+@media only screen and (max-width: 1122px) {
+  .brand-text {
+    display: none;
+  }
+}
 
 /* 960 - nav elementi ispadaju */
 @media only screen and (max-width: 960px) {

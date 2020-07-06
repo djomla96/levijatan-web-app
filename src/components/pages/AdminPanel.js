@@ -45,7 +45,7 @@ class AdminPanel extends Component {
     render() {
         return (
             <div>
-                <h2>Lista qudi koji su popunili pristupnicu na sajtu</h2>
+                <h2 className="title-panel">Lista qudi koji su popunili pristupnicu na sajtu</h2>
                 {this.state.showButton ? <a className="go-to-login" href="/admin">Login</a> : null}
                 <DataTable
                     columns={columns}

@@ -2,14 +2,15 @@ import React, { Component } from 'react'
 import '../../css/login.css';
 import Validator from 'validator';
 import { withAlert } from 'react-alert'
-import users_json from '../../json/user.json';
 import axios from '../../axios/axios';
 import cookie from 'react-cookies';
+import LoadingSpinner from '../LodingSpinner';
 
 class AdminLogin extends Component {
     state = {
         email: "",
-        password: ""
+        password: "",
+        loading: false
     }
 
     submitSignIn(event, data) {
@@ -28,21 +29,26 @@ class AdminLogin extends Component {
           return;
         }
 
+        this.setState({ loading: true });
         axios.post('/pristupnice/login', { data })
           .then(response => {
             const { data } = response
             this.props.alert.show(data.message, { type: data.status });
             cookie.save('lev_token', data.token, { path: '/' });
             this.props.history.push('/tgzy75cffx2s5tar8cx5wi3rmefo7klhxneeipfcxdohimso1oxx790ff');
+            this.setState({ loading: false });
           }).catch(error => {
             console.log(error);
             this.props.alert.show(error.response.data.message, { type: error.response.data.status });
+            this.setState({ loading: false });
           });
     }
 
     render() {
         const headline = "DOBRO DO{LI NA ADMIN PANEL LEVIJATAN";
         return (
+          <>
+          {this.state.loading ? <LoadingSpinner /> : null}
             <div className="form-wrapper-login">
                 <form className="login-form">
         <h1 className="login-header">{headline}</h1>
@@ -76,6 +82,7 @@ class AdminLogin extends Component {
         </div>         
       </form>
             </div>
+            </>
         )
     }
 }

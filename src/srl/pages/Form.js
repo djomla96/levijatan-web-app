@@ -5,7 +5,6 @@ import '../../css/form.css';
 import axios from '../../axios/axios';
 import Validator from 'validator';
 import { withAlert } from 'react-alert'
-import LoadingSpinner from '../LodingSpinner';
 
 class Form extends Component {
 
@@ -17,20 +16,14 @@ class Form extends Component {
         email: "",
         sss: "",
         zanimanje: "",
-        loading: false
     }
 
     saveBot(data) {
-        this.setState({ loading: true });
         axios.post('/pristupnice/save', data)
             .then(response => {
-                this.setState({ loading: false });
                 this.setState({ imePrezime: "", jmbg: 0, adresa: "", telefon: "", email: "", sss: "", zanimanje: ""});
                 this.props.alert.show('Cestitamo uspesno ste poslali pristupnicu', { type: 'success' })
-            }).catch(error => {
-                console.log(error);
-                this.setState({ loading: false });
-            })
+            }).catch(error => console.log(error))
     }
 
     validate(data) {
@@ -77,8 +70,6 @@ class Form extends Component {
         const stepen = "STEPEN STRU;NE SPREME";
         const buttonText = "PO{AQI PRISTUPNICU";
         return (
-            <>
-            {this.state.loading ? <LoadingSpinner /> : null}
             <div className="form-wrapper">
                 <div className="logos">
                 <div className="logo-2">
@@ -89,8 +80,8 @@ class Form extends Component {
                     </div>
                 </div>
                 <div className="text-wrapper">
-                    <h2>Позивамо искрене <span>Србе</span>, преостало здраво и патриотско ткиво нашег разрушеног и нападнутог друштва да се придруже и да покажу да постојимо и да нас још увек има! Наш национални идентитет је доведен у питање, а он је битнији од политике и сваког ситног политичког поена.</h2>
-                    <p>Услед повећања обима посла и јачања Покрета Левијатан Србија и Националне одбране, расписујемо ову приступницу. Сврха саме приступнице је јачање круга деловања и ширење наше мреже, као и јачање здраве идеје широм територије Републике Србије. Сваки округ ће имати своје надлежне органе и председнике који ће имати јасно дефинисана задужења и функције, које се морају схватити озбиљним! Потписивањем ове приступнице потписник активно учествује у раду покрета!</p>
+                    <h2>Pozivamo iskrene <span>Srbe</span>, preostalo zdravo i patriotsko tkivo našeg razrušenog i napadnutog društva da se pridruže i da pokažu da postojimo i da nas još uvek ima! Naš nacionalni identitet je doveden u pitanje a on je bitniji od politike i svakog sitnog političkog poena!</h2>
+                    <p>Usled povećanja obima posla i jačanja pokreta Levijatan Srbija i Nacionalne odbrane, raspisujemo ovu pristupnicu. Svrha same pristupnice je jačanje kruga delovanja i širenje naše mreže, kao i jačenje zdrave ideje širom teritorije republike Srbije. Svaki okrug će imati svoje nadležne organe i predsednike koji će imati jasno definisana zaduženja i funkcije, koje se moraju shvatati ozbiljnim! Potpisivanjem ove pristupnice, potpisnik aktivno učestvuje u radu pokreta!</p>
                 </div>
                 <div className="headline"><h1>PRISTUPNICA</h1></div>
 
@@ -106,7 +97,6 @@ class Form extends Component {
                     <div className="btn-submit" onClick={(event) => this.sendData(event)}><button>{buttonText}</button></div>
                 </form>
             </div>
-            </>
         )
     }
 }

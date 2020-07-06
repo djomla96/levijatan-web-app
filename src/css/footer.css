@@ -21,6 +21,7 @@ header p {
   margin-bottom: 2em;
 }
 h2 {
+  margin-top: 0!important;
   font-weight: 900;
   font-size: 16px;
 }
@@ -69,7 +70,6 @@ h2 {
 }
 
 .l-footer p {
-  padding-right: 20%;
   color: #999;
 }
 
