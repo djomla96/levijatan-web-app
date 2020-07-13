@@ -8,6 +8,7 @@ export default class Home extends Component {
 
     render() {
         const bannerText = "DOBRO DO{LI NA YVANI;AN SAJT";
+        const title = "POKRETA LEVIJATAN NA DRU{TVENIM MRE\\AMA";
         return (
             <div>
                 <div className="section-one">
@@ -37,7 +38,7 @@ export default class Home extends Component {
                 </div>
                 <div className="section-three">
                 <div className="wrapper">
-                <div className="social-info">POKRET LEVIJATAN NA DRUŠTVENIM MREŽAMA</div>
+                <div className="social-info">{title}</div>
                 <ul className="social-networks-bottom">
                     <li className="social-item"> <a href="https://www.facebook.com/pasazot/"><i className="fa fa-facebook fa-3x f"></i></a>
                     </li>

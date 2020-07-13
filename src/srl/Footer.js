@@ -14,7 +14,7 @@ const Footer = () => {
     </div>
     <ul className="r-footer ">
       <li>
-        <h2>PRETRAŽI</h2>
+        <h2 className="title-h2">PRETRAŽI</h2>
         <ul className="box">
           <li><a href="/o-nama/srl">O NAMA</a></li>
           <li><a href="/program-pokreta/srl">PROGRAM</a></li>

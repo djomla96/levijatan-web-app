@@ -25,7 +25,9 @@ h2 {
   font-weight: 900;
   font-size: 16px;
 }
-
+.title-h2 {
+  font-family: Monsterrat;
+}
 .footer ul {
   list-style: none;
   padding-left: 0;
