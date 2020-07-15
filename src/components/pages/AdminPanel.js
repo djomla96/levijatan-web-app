@@ -12,7 +12,8 @@ const columns = [
     { name: 'Telefon', selector: 'telefon'}, 
     { name: 'Email', selector: 'email'},
     { name: 'Stepen strucne spreme', selector: 'stepenSpreme'},
-    { name: 'Zanimanje', selector: 'zanimanje'}
+    { name: 'Zanimanje', selector: 'zanimanje'},
+    { name: 'Aktivnost', selector: 'aktivnost'}
 ];
 
 class AdminPanel extends Component {
@@ -36,6 +37,7 @@ class AdminPanel extends Component {
         axios.get('/pristupnice')
             .then(response => {
                 const { data } = response;
+                console.log(data);
                 this.setState({ bots: data });
             }).catch(error => {
                 console.log(error);

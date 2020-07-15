@@ -28,6 +28,15 @@
 .form-input {
     text-align: left;
     display: flex;
+    align-items: center;
+}
+.form-input label{
+    color: #2b6db6;
+}
+.aktivnost {
+    width: unset!important;
+    transform: scale(1.5);
+    margin: 0 25px;
 }
 .form-input p {
     margin-right: 10px;

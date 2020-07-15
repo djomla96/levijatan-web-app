@@ -10,20 +10,24 @@ class Form extends Component {
 
     state = {
         imePrezime: "",
-        jmbg: null,
+        jmbg: "",
         adresa: "",
         telefon: "",
         email: "",
         sss: "",
         zanimanje: "",
+        aktivnost: true
     }
 
     saveBot(data) {
         axios.post('/pristupnice/save', data)
             .then(response => {
-                this.setState({ imePrezime: "", jmbg: 0, adresa: "", telefon: "", email: "", sss: "", zanimanje: ""});
+                this.setState({ imePrezime: "", jmbg: "", adresa: "", telefon: "", email: "", sss: "", zanimanje: ""});
                 this.props.alert.show('Cestitamo uspesno ste poslali pristupnicu', { type: 'success' })
-            }).catch(error => console.log(error))
+            }).catch(error => {
+                this.props.alert.show(error.response.data.message, { type: 'error' });
+                console.log(error)
+            })
     }
 
     validate(data) {
@@ -69,6 +73,12 @@ class Form extends Component {
         const adresa = "ADRESA I OP{TINA STANOVAWA";
         const stepen = "STEPEN STRU;NE SPREME";
         const buttonText = "PO{AQI PRISTUPNICU";
+        let aktivnostText;
+        if(this.state.aktivnost) {
+            aktivnostText = "AKTIVAN"
+        } else {
+            aktivnostText = "NEAKTIVAN"
+        }
         return (
             <div className="form-wrapper">
                 <div className="logos">
@@ -82,6 +92,9 @@ class Form extends Component {
                 <div className="text-wrapper">
                     <h2>Pozivamo iskrene <span>Srbe</span>, preostalo zdravo i patriotsko tkivo našeg razrušenog i napadnutog društva da se pridruže i da pokažu da postojimo i da nas još uvek ima! Naš nacionalni identitet je doveden u pitanje a on je bitniji od politike i svakog sitnog političkog poena!</h2>
                     <p>Usled povećanja obima posla i jačanja pokreta Levijatan Srbija i Nacionalne odbrane, raspisujemo ovu pristupnicu. Svrha same pristupnice je jačanje kruga delovanja i širenje naše mreže, kao i jačenje zdrave ideje širom teritorije republike Srbije. Svaki okrug će imati svoje nadležne organe i predsednike koji će imati jasno definisana zaduženja i funkcije, koje se moraju shvatati ozbiljnim! Potpisivanjem ove pristupnice, potpisnik aktivno učestvuje u radu pokreta!</p>
+                    <p>Pristupnica se sastoji od AKTIVNIH i NEAKTIVNIH i članova.</p>
+                    <p>Svaki okrug će imate svoje nadležne organe i predsednike koji će imati jasno definisana zaduženja i funkcije koje se moraju shvatiti ozbiljnim, a za navedene dužnosti mogu konkurisati isključivo aktivni članovi, koji će svojim delovanjem aktivno učestvovati u radu pokreta. Cena članarine na mesečnom nivou iznosi 600rsd.</p>
+                    <p>Neaktivni članovi svojim delovanjem direktno ne utiču u radu pokreta ali mogu imati određene aktivnosti. Njihov doprinos se ogleda u tome što su jedni od nas, a sloga i jačanje pokreta su trenutno od neoprocenjive važnosti.</p>
                 </div>
                 <div className="headline"><h1>PRISTUPNICA</h1></div>
 
@@ -93,6 +106,7 @@ class Form extends Component {
                     <div className="form-input"><p>E-MAIL</p><input value={this.state.email} onChange={(event) => this.setState({ email: event.target.value })} type="email"></input></div>
                     <div className="form-input"><p>{stepen}</p><input value={this.state.sss} onChange={(event) => this.setState({ sss: event.target.value })} type="text"/></div>
                     <div className="form-input"><p>YANIMAWE</p><input value={this.state.zanimanje} onChange={(event) => this.setState({ zanimanje: event.target.value })} type="text"></input></div>
+                    <div className="form-input"><p>Aktivnost</p><input className="aktivnost" name="aktivnost" type="checkbox" checked={this.state.aktivnost} onChange={(event) => this.setState({ aktivnost: !this.state.aktivnost })} /><label>{aktivnostText}</label></div>
 
                     <div className="btn-submit" onClick={(event) => this.sendData(event)}><button>{buttonText}</button></div>
                 </form>
