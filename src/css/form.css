@@ -89,7 +89,6 @@
     color: #df0000;
 }
 
-
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 15px;
@@ -102,6 +101,9 @@
     }
     .form-input input {
         margin: 10px 0;
+    }
+    .form-input p {
+        text-align: center;
     }
 }
 @media screen and (max-width: 480px) {
