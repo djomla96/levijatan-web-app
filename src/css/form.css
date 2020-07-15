@@ -25,6 +25,14 @@
     padding: 50px;
     background: rgba(255,255,255,0.5);
 }
+.cLiCmx div:first-child {
+    white-space: unset!important;
+    text-align: left;
+}
+.gaBHUO div:first-child {
+    white-space: unset!important;
+    text-align: left;
+}
 .form-input {
     text-align: left;
     display: flex;
