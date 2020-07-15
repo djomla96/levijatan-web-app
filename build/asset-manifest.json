@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.20b402d7.chunk.css",
+    "main.css": "/static/css/main.d55f11f0.chunk.css",
     "main.js": "/static/js/main.a40e70ed.chunk.js",
     "main.js.map": "/static/js/main.a40e70ed.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2d07a3e2.js",
@@ -9,10 +9,10 @@
     "static/js/2.3400195d.chunk.js": "/static/js/2.3400195d.chunk.js",
     "static/js/2.3400195d.chunk.js.map": "/static/js/2.3400195d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c987445d42898d709d3fcc4b8dfc00d7.js": "/precache-manifest.c987445d42898d709d3fcc4b8dfc00d7.js",
+    "precache-manifest.e2b9ba08598761633f0e793e3a5e4c53.js": "/precache-manifest.e2b9ba08598761633f0e793e3a5e4c53.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.e1b54d7a.chunk.css.map": "/static/css/2.e1b54d7a.chunk.css.map",
-    "static/css/main.20b402d7.chunk.css.map": "/static/css/main.20b402d7.chunk.css.map",
+    "static/css/main.d55f11f0.chunk.css.map": "/static/css/main.d55f11f0.chunk.css.map",
     "static/js/2.3400195d.chunk.js.LICENSE.txt": "/static/js/2.3400195d.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/levijatanfont.67cab3c7.ttf",
     "static/media/bannerlogo.png": "/static/media/bannerlogo.1e5928cf.png",
@@ -28,7 +28,7 @@
     "static/js/runtime-main.2d07a3e2.js",
     "static/css/2.e1b54d7a.chunk.css",
     "static/js/2.3400195d.chunk.js",
-    "static/css/main.20b402d7.chunk.css",
+    "static/css/main.d55f11f0.chunk.css",
     "static/js/main.a40e70ed.chunk.js"
   ]
 }

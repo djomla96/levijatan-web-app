@@ -16,7 +16,8 @@
 }
 .doBktq, .dqcspZ {
   font-size: 15px !important;
-  min-height: unset!important;
+  min-height: auto!important;
+  padding: 10px 0;
 }
 h2 {
   font-family: levijatan;
