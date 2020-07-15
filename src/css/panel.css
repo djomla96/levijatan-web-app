@@ -16,6 +16,7 @@
 }
 .doBktq, .dqcspZ {
   font-size: 15px !important;
+  min-height: unset!important;
 }
 h2 {
   font-family: levijatan;
@@ -24,8 +25,10 @@ h2 {
 }
 .fWHyCt, .hBxfkO {
   margin-bottom: 100px;
+}
+.ieTOoW, .fNcYWv {
+  max-height: 500px;
   overflow-y: auto;
-  max-height: 1000px;
 }
 .go-to-login {
   background: #2b6db6;
