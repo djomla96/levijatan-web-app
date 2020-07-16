@@ -34,7 +34,7 @@ class AdminPanel extends Component {
     }
 
     getBots() {
-        axios.get('/pristupnice')
+        axios.post('/pristupnice', {token: cookie.load('lev_token')})
             .then(response => {
                 const { data } = response;
                 console.log(data);
