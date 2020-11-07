@@ -28,47 +28,47 @@ import React, { Component } from 'react'
 import history from "./utils/history";
 export default class App extends Component {
 
-  componentDidMount() {
-    document.addEventListener('contextmenu', function(e) {
-      e.preventDefault();
-    });
+  // componentDidMount() {
+  //   document.addEventListener('contextmenu', function(e) {
+  //     e.preventDefault();
+  //   });
 
-    document.onkeydown = function(e) {
-      if(e.key == "F12") {
-         return false;
-      }
-    }
-  }
+  //   document.onkeydown = function(e) {
+  //     if(e.key == "F12") {
+  //        return false;
+  //     }
+  //   }
+  // }
 
   render() {
     const isLat = cookie.load('isLat');
     return (
       <Router history={history}>
-      <div className="App">
-        {isLat === 'true' ? <HeaderSrl /> : <Header />}
+        <div className="App">
+          {isLat === 'true' ? <HeaderSrl /> : <Header />}
           <Switch>
-            <Route exact path={'/'} component={Home}/>
-            <Route exact path={'/o-nama'} component={About}/>
-            <Route exact path={'/program-pokreta'} component={Program}/>
-            <Route exact path={'/kontakt'} component={Contact}/>
-            <Route exact path={'/pristupnica'} component={Form}/>
-            <Route exact path={'/admin'} component={AdminLogin}/>
-            <Route exact path={'/tgzy75cffx2s5tar8cx5wi3rmefo7klhxneeipfcxdohimso1oxx790ff'} component={AdminPanel}/>
-            <Route exact path={'/video-arhiva'} component={Video}/>
+            <Route exact path={'/'} component={Home} />
+            <Route exact path={'/o-nama'} component={About} />
+            <Route exact path={'/program-pokreta'} component={Program} />
+            <Route exact path={'/kontakt'} component={Contact} />
+            <Route exact path={'/pristupnica'} component={Form} />
+            <Route exact path={'/admin'} component={AdminLogin} />
+            <Route exact path={'/tgzy75cffx2s5tar8cx5wi3rmefo7klhxneeipfcxdohimso1oxx790ff'} component={AdminPanel} />
+            <Route exact path={'/video-arhiva'} component={Video} />
 
-            <Route path={'/srl'} component={HomeSrl}/>
-            <Route path={'/o-nama/srl'} component={AboutSrl}/>
-            <Route path={'/program-pokreta/srl'} component={ProgramSrl}/>
-            <Route path={'/kontakt/srl'} component={ContactSrl}/>
-            <Route exact path={'/pristupnica/srl'} component={FormSrl}/>
-            <Route exact path={'/admin/srl'} component={AdminLogin}/>
-            <Route exact path={'/tgzy75cffx2s5tar8cx5wi3rmefo7klhxneeipfcxdohimso1oxx790ff/srl'} component={AdminPanel}/>
-            <Route exact path={'/video-arhiva/srl'} component={VideoSrl}/>
+            <Route path={'/srl'} component={HomeSrl} />
+            <Route path={'/o-nama/srl'} component={AboutSrl} />
+            <Route path={'/program-pokreta/srl'} component={ProgramSrl} />
+            <Route path={'/kontakt/srl'} component={ContactSrl} />
+            <Route exact path={'/pristupnica/srl'} component={FormSrl} />
+            <Route exact path={'/admin/srl'} component={AdminLogin} />
+            <Route exact path={'/tgzy75cffx2s5tar8cx5wi3rmefo7klhxneeipfcxdohimso1oxx790ff/srl'} component={AdminPanel} />
+            <Route exact path={'/video-arhiva/srl'} component={VideoSrl} />
           </Switch>
-        {isLat === 'true' ? <FooterSrl /> : <Footer />}
-        
-      </div>
-    </Router>
+          {isLat === 'true' ? <FooterSrl /> : <Footer />}
+
+        </div>
+      </Router>
     )
   }
 }
