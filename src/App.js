@@ -28,17 +28,17 @@ import React, { Component } from 'react'
 import history from "./utils/history";
 export default class App extends Component {
 
-  // componentDidMount() {
-  //   document.addEventListener('contextmenu', function(e) {
-  //     e.preventDefault();
-  //   });
+  componentDidMount() {
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
 
-  //   document.onkeydown = function(e) {
-  //     if(e.key == "F12") {
-  //        return false;
-  //     }
-  //   }
-  // }
+    document.onkeydown = function (e) {
+      if (e.key == "F12") {
+        return false;
+      }
+    }
+  }
 
   render() {
     const isLat = cookie.load('isLat');
