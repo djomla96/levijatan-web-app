@@ -78,7 +78,6 @@ class AdminPanel extends Component {
     componentDidUpdate(routeData, newState) {
         if (newState.choosen !== this.state.choosen)
             this.getData();
-        else console.log("sisaj ga");
     }
 
     getData() {
@@ -93,6 +92,8 @@ class AdminPanel extends Component {
                 this.setState({ data: data });
 
             }).catch(error => {
+                this.setState({data: []})
+                this.props.alert.show("Nemate permisije za ovaj sadrzaj!", { type: "error" });
                 console.log(error);
             })
     }
@@ -113,15 +114,8 @@ class AdminPanel extends Component {
             <div>
                 <h2 className="title-panel">lista qudi koji su popunili pristupnicu na sajtu</h2>
                 <div className="button-wrapper" style={{ flexDirection: 'row' }}>
-                    <button onClick={() => {
-                        console.log("ja sam konj");
-                        this.setState({ choosen: 'pristupnice' });
-                        console.log(this.state);
-                    }}>Pristupnice</button>
-                    <button onClick={() => {
-                        this.setState({ choosen: 'prijave' })
-                        console.log(this.state);
-                    }}>Prijave</button>
+                    <button onClick={() => this.setState({ choosen: 'pristupnice' })}>Pristupnice</button>
+                    <button onClick={() => this.setState({ choosen: 'prijave' })}>Prijave</button>
                 </div>
                 {this.state.showButton ? <a className="go-to-login" href="/admin">Login</a> : null}
                 <div className="button-wrapper"><button onClick={() => this.exportToCSV(this.state.data, file_name)}>Export to excel</button></div>
